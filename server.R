@@ -120,7 +120,7 @@ var_names <- c("Age", "Career", "Games","MP","PTS","FG","FGA","FGperc","thrP","t
           cbind(var_names,round(pca_m$var$coord, digits = 6))
         })
         output$dim1 <- renderPlot({
-          fviz_contrib(pca_m, choice = "var", axes = 2, top = 10)
+          fviz_contrib(pca_m, choice = "var", axes = 1, top = 10)
         })
         output$dim2 <- renderPlot({
           fviz_contrib(pca_m, choice = "var", axes = 2, top = 10)
